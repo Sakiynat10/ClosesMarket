@@ -1,0 +1,126 @@
+#hero{
+    margin-top: 78px;
+    .hero-left{
+        padding-bottom: 40px;
+        max-width: 500px;
+        width: 100%;
+        h1{
+            font-size: 48px;
+            line-height: 60px;
+        }
+        p{
+            font-size: 18px;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+        button{
+            padding: 10px 20px;
+            margin-top: 30px;
+            background-color: rgb(59, 232, 59);
+            color: #fff;
+            font-size: 18px;
+            border-radius: 10px;
+            border:2px solid rgb(59, 232, 59);
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+                background-color: #fff;
+                color: rgb(59, 232, 59);
+                border: 2px solid rgb(59, 232, 59);
+            }
+        }
+        
+    }
+    .swiper-img{
+        padding-top: 170px;
+        padding-bottom: 60px;
+        background-position: top;
+        background-size: cover; 
+    }
+    .swiper-img:first-child{
+        background-image: url(../../assets/mages/hero-bg-image-1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .swiper-img:nth-child(2){
+        background-image: url(../../assets/mages/hero-bg-image-2.jpg);
+    }
+    .swiper-img:nth-child(3){
+        background-image: url(../../assets/mages/hero-bg-image-3.jpg);
+    }
+    .swiper-img:nth-child(4){
+        background-image: url(../../assets/mages/hero-bg-image-4.jpg);
+        .hero-left{
+            h1,p{
+                color: rgb(8, 27, 76);
+            }
+        }
+    }
+    .swiper-img:nth-child(5){
+        background-image: url(../../assets/mages/hero-bg-image-5.jpg);
+    }
+
+    .swiper-pagination-bullets{
+        .swiper-pagination-bullet-active{
+            background-color: red !important;
+            color: red;
+        }
+    }
+}
+
+#products{
+    padding-top: 90px;
+    padding-bottom: 60px;
+    h1{
+        text-align: center;
+        font-size: 42px;
+        color: rgb(8, 27, 76);
+        margin-bottom: 40px;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        @media(min-width:700px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(min-width:1000px) {
+            grid-template-columns:1fr 1fr 1fr;
+        }
+    }
+    .product-tabs{
+        min-height: 100vh;
+    }
+    .tabs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        .tab-link{
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid orangered;
+            border-radius: 50px;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: orangered;
+            &:hover{
+                color: #fff;
+                background-color: rgba(255, 68, 0, 0.563);
+            }
+        }
+        .react-tabs__tab--selected{
+            color: #fff;
+            background-color: orangered !important;
+            box-shadow: 5px 5px 10px orangered !important;
+        }
+    }
+}
+
